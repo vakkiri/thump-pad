@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://AudioSample.gd" type="Script" id=1]
+
+[node name="AudioSample" type="AudioStreamPlayer"]
+bus = "FX Bus 1"
+script = ExtResource( 1 )

@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://AudioSample.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Audio/hotpants-180.wav" type="AudioStream" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://Audio/sub.wav" type="AudioStream" id=4]
+[ext_resource path="res://PitchedAudioSample.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Audio/pad.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/amen-180.wav" type="AudioStream" id=7]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="HotPants" parent="." instance=ExtResource( 1 )]
+stream = ExtResource( 2 )
+use_loop = true
+
+[node name="Amen" parent="." instance=ExtResource( 1 )]
+stream = ExtResource( 7 )
+key = "trigger_2"
+use_loop = true
+
+[node name="PitchedAudioSample" parent="." instance=ExtResource( 5 )]
+stream = ExtResource( 4 )
+key = "dpad_up"
+oneTrigger = true
+
+[node name="PitchedAudioSample2" parent="." instance=ExtResource( 5 )]
+stream = ExtResource( 4 )
+key = "dpad_right"
+oneTrigger = true
+note = 2
+
+[node name="PitchedAudioSample3" parent="." instance=ExtResource( 5 )]
+stream = ExtResource( 4 )
+key = "dpad_down"
+oneTrigger = true
+note = 7
+
+[node name="PitchedAudioSample4" parent="." instance=ExtResource( 5 )]
+stream = ExtResource( 4 )
+key = "dpad_left"
+oneTrigger = true
+note = 9
+
+[node name="PitchedAudioSample5" parent="." instance=ExtResource( 5 )]
+stream = ExtResource( 6 )
+key = "button_l"
+oneTrigger = true
+note = 8
+
+[node name="PitchedAudioSample6" parent="." instance=ExtResource( 5 )]
+stream = ExtResource( 6 )
+key = "button_r"
+oneTrigger = true
+note = -1
